@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>让坦克开起来</title>
+    <style type="text/css">
+        input {
+            font-size: 26px;
+            margin-top: 20px;
+        }
+
+        body{background-image: url(../img/grassland.png);}
+
+        #my_tank {
+            z-index: -1;
+            position: absolute;
+            left: 10px;
+            top: 100px;
+            transition: transform 0.5s; /* 添加过渡效果 */
+        }
+
+        body {
+            margin: 0;
+        }
+
+    </style>
+</head>
+<body>
+<img id="my_tank" src="../img/left.png" alt=""/>
+<script>
+
+    // 获取坦克
+    let my_tank = document.getElementById("my_tank");
+
+    // 监听事件
+    window.addEventListener("keypress", (e) => {
+        // 获取left
+        let left = parseFloat(getComputedStyle(my_tank).left);
+        // 获取top
+        let top = parseFloat(getComputedStyle(my_tank).top);
+        switch (e.key) {
+            case 'a':
+                my_tank.style.transform = 'rotate(-180deg)';
+                if (left > 0) {
+                    my_tank.style.left = left - 10 + 'px';
+                }
+                break;
+            case 'd':
+                my_tank.style.transform = 'rotate(0deg)';
+                if (left < 1450) {
+                    my_tank.style.left = left + 10 + 'px';
+                }
+                break;
+            case 'w':
+                my_tank.style.transform = 'rotate(-90deg)';
+                if (top > 10) {
+                    my_tank.style.top = top - 10 + 'px';
+                }
+                break;
+            case 's':
+                my_tank.style.transform = 'rotate(90deg)';
+                if (top < 830) {
+                    my_tank.style.top = top + 10 + 'px';
+                }
+                break;
+            default:
+                alert('只能使用WASD移动！');
+        }
+    })
+
+
+
+</script>
+</body>
+</html>

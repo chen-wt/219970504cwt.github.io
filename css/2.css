@@ -1,0 +1,130 @@
+.beijing{
+	top: 0%;
+	height: 1800px;
+	margin: 0 auto;
+	text-align: center;
+	background-color: black;
+	width: 700px;
+}
+
+
+
+        .box {
+            /* 设置相对定位 */
+            position: relative;
+            /* 设置盒子的宽高 */
+            width: 400px;
+            height: 300px;
+    
+			position: fixed;
+			top: 0;
+			right: 0;
+        }
+        
+        .box img {
+            /* 设置图片的宽度 */
+            width: 400px;
+            height: 300px;
+        }
+        
+        .close-btn1 {
+            /* 设置绝对定位 */
+            position: absolute;
+            /* 确定内容的位置 */
+            top: 1px;
+            right: 400px;
+			
+            /* 确定内容的大小 */
+            width: 14px;
+            height: 14px;
+            /* 设置边框的颜色和样式 */
+            border: 1px solid #ccc;
+            /* 设置行高 */
+            line-height: 14px;
+			/* 设置颜色*/
+			background-color: white;
+            /* 设置鼠标悬浮在上面的时候的样式 */
+            cursor: pointer;
+        }
+
+       .box2 {
+            /* 设置相对定位 */
+            position: relative;
+            /* 设置盒子的宽高 */
+            width: 400px;
+            height: 300px;
+    
+			position: fixed;
+			top: 0;
+			left: 0;
+        }
+        
+        .box2 img {
+            /* 设置图片的宽度 */
+            width: 400px;
+            height: 300px;
+
+
+        }
+        
+        .close-btn2 {
+            /* 设置绝对定位 */
+            position: absolute;
+            /* 确定内容的位置 */
+            top: 1px;
+            left: 400px;
+
+            /* 确定内容的大小 */
+            width: 14px;
+            height: 14px;
+            /* 设置边框的颜色和样式 */
+            border: 1px solid #ccc;
+            /* 设置行高 */
+            line-height: 14px;
+            /* 设置字体样式 */
+            font-family: Arial, Helvetica, sans-serif;
+            /* 设置鼠标悬浮在上面的时候的样式 */
+            cursor: pointer;
+        }
+		
+		
+		.box3 {
+		     /* 设置相对定位 */
+		     position: relative;
+		     /* 设置盒子的宽高 */
+		     width: 500px;
+		     height: 320px;
+		    
+			position: fixed;
+			bottom: 0;
+			right: 0;
+		 }
+		 
+		 .box3 img {
+		     /* 设置图片的宽度 */
+		     width: 500px;
+		     height: 300px;
+		
+		
+		 }
+		 
+		 .close-btn3 {
+		     /* 设置绝对定位 */
+		     position: absolute;
+		     /* 确定内容的位置 */
+		     top: -20px;
+		     right: 0px;
+             /*文字居中*/
+             text-align: center;
+		     /* 确定内容的大小 */
+		     width: 60px;
+		     height: 20px;
+		     /* 设置边框的颜色和样式 */
+		     border: 1px solid #ccc;
+		     /* 设置行高 */
+		     line-height: 14px;
+		     /* 设置字体样式 */
+		     font-family: Arial, Helvetica, sans-serif;
+		     /* 设置鼠标悬浮在上面的时候的样式 */
+		     cursor: pointer;
+		 }

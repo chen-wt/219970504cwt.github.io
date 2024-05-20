@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	<script>
+		//219970504 陈文涛
+	    // 三角形
+	    for (let i = 0; i < 5; i++) {
+	        for (let j = i; j < 4; j++) {
+	            document.write("&nbsp;&nbsp;")
+	        }
+	        for (let j = 0; j <= i; j++) {
+	
+	            document.write("*")
+	            document.write("&nbsp;&nbsp;&nbsp;")
+	        }
+	        document.write("<br>")
+	    }
+	
+	    document.write("<br/>");
+	
+	    // 平行四边形
+	    for (let i = 0; i < 5; i++) {
+	        for (let j = 0; j < 5 - i; j++) {
+	            document.write("&emsp;")
+	        }
+	        for (let k = 0; k < 6; k++) {
+	            document.write("*&emsp;")
+	        }
+	        document.write("<br>")
+	    }
+	
+	    document.write("<br/>");
+	
+	    //菱形
+	    for (let i = 1; i <= 5; i++) {
+	        for (let j = 1; j <= 5 - i; j++) {
+	            document.write("&emsp;")
+	        }
+	        for (let j = 1; j <= i; j++) {
+	            document.write("* &emsp; ")
+	        }
+	        document.write("<br>")
+	    }
+	
+	    for (let i = 1; i <= 5; i++) {
+	        for (let j = 1; j <= i; j++) {
+	            document.write("&emsp;")
+	        }
+	        for (let j = 1; j <= 5 - i; j++) {
+	            document.write("* &emsp; ")
+	        }
+	        document.write("<br>")
+	    }
+	
+	</script>
+
+	</body>
+</html>
