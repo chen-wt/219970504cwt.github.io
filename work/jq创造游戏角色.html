@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <style>
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+			background-color: #000000;
+        }
+
+        #player {
+            position: absolute; /* 设置绝对定位，以便准确定位 */
+        }
+    </style>
+</head>
+<body>
+        <div class="move">
+            <img id="player" src="../img/player_right.gif" style="height: 200px;">
+        </div>       
+    <script>
+            $(document).ready(function () {
+                var $player = $('#player');
+                var originalImage = $player.attr('src');
+                var attacking = false;
+                var moveDuration = 2000; // 移动持续时间（毫秒）
+    
+                // 鼠标左键点击事件
+                $(document).on('click', function (e) {
+                    if (e.which === 1 && !attacking) { // 检查是否是左键点击且未处于攻击状态
+                        var posX = e.pageX - $player.width() / 2;
+                        var posY = e.pageY - $player.height() / 2;
+                        $player.stop(true, false).animate({
+                            left: posX,
+                            top: posY
+                        }, moveDuration);
+                    }
+                });
+    
+                // 鼠标左键双击事件
+                $(document).on('dblclick', function (e) {
+                    if (e.which === 1) {
+                        if ($player.attr('src') === originalImage) {
+                            $player.attr('src', '../img/player2.gif');
+                        } else {
+                            $player.attr('src', originalImage);
+                        }
+                    }
+                });
+    
+                // 阻止右键菜单
+                $(document).on('contextmenu', function (e) {
+                    e.preventDefault();
+                });
+            });
+        </script>
+</body>
+</html>
